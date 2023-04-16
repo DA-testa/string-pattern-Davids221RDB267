@@ -2,8 +2,8 @@
 
 def read_input():
    
-    input = input()
-    if "I" in input:
+    ievadits = input()
+    if "I" in ievadits:
         text=input()
         pattern=input()
         
@@ -13,19 +13,18 @@ def read_input():
             text=t.readline()
             pattern=t.readline()
    
-    return (pattern().rstrip(), text().rstrip())
+    return (pattern.rstrip(), text.rstrip())
 
 def print_occurrences(output):
     
     print(' '.join(map(str, output)))
 
 def get_occurrences(pattern, text):
-   get=[]
-
+    get=[]
     txt=len(text)
     pat=len(pattern)
 
-    txthash=hash(text[ : pat]
+    txthash=hash(text[:pat])
     pathash=hash(pattern)
                  
                  
@@ -33,7 +32,7 @@ def get_occurrences(pattern, text):
         if pattern==text[a:pat+a] and txthash==pathash:
            get.append(a)
         
-        if a<txt=pat:
+        if a<txt-pat:
              txthash=hash(txt[1+a:pat+a+1])
                  
     return get
