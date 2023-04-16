@@ -4,14 +4,16 @@ def read_input():
    
     ievadits = input()
     if "I" in ievadits:
-        text=input()
+        
         pattern=input()
+        text=input()
         
     else:
         testi="tests/06"
         with open(testi,"r") as t:
-            text=t.readline()
+            
             pattern=t.readline()
+            text=t.readline()
    
     return (pattern.rstrip(), text.rstrip())
 
