@@ -33,7 +33,7 @@ def get_occurrences(pattern, text):
            get.append(a)
         
         if a<txt-pat:
-             txthash=hash(txt[1+a:pat+a+1])
+             txthash=hash(txt[a+1:pat+a])
                  
     return get
 
