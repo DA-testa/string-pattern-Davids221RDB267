@@ -29,11 +29,11 @@ def get_occurrences(pattern, text):
                  
                  
     for a in range(txt-pat+1):    
-        if pattern==text[a:pat+a] and txthash==pathash:
+        if pattern==text[a:a+pat] and txthash==pathash:
            get.append(a)
         
-        if a<txt-pat:
-             txthash=hash(txt[a+1:pat+a])
+        if txt-pat>a:
+             txthash=hash(text[a+1:pat+a+1])
                  
     return get
 
