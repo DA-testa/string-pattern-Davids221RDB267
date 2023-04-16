@@ -31,7 +31,7 @@ def get_occurrences(pattern, text):
                  
                  
     for a in range(txt-pat+1):    
-        if pattern==text[a:a+pat] and txthash==pathash:
+        if pattern==text[a:pat+a] and txthash==pathash:
            get.append(a)
         
         if txt-pat>a:
